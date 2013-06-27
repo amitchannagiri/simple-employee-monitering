@@ -57,15 +57,23 @@ class popup extends JFrame implements ActionListener
         		
 		p.add(stop);
 				           
-		start.addActionListener(this); 
+	//	start.addActionListener(this); 
              
-		stop.addActionListener(this); 
+	//	stop.addActionListener(this); 
+		stop.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent le){
+        flag=false;
+        System.exit(0);
+        }
+        }
+        );		
 		   	
 		show();
 	   
 	}
 	
 
+	
 
 	public void actionPerformed(ActionEvent e)
 	
@@ -80,12 +88,12 @@ class popup extends JFrame implements ActionListener
 				{  
 			 simplethread s1 = new simplethread();
 			try {
-				
-				
+
+
+
+Thread.sleep(Integer.parseInt(del.getText()));
 					
-					Thread.sleep(Integer.parseInt(del.getText()));
-					
-					
+			
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -107,6 +115,17 @@ class popup extends JFrame implements ActionListener
 
 	
 	} }
+
+
+/*	stop.addActionListener(new ActionListener() {
+	public void actionPerformed(ActionEvent le){
+	flag=false;
+	System.exit(0);
+	}
+	}	
+	);
+
+*/
 
 	public static void main(String v[]) throws  InterruptedException
 
