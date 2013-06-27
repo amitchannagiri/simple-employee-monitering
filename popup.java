@@ -21,6 +21,7 @@ class popup extends JFrame implements ActionListener
 	
 	JButton start,stop;
 	JTextField del;
+	static boolean flag=false; 	
 		
 	@SuppressWarnings("deprecation")
 	public popup()
@@ -59,11 +60,7 @@ class popup extends JFrame implements ActionListener
 		start.addActionListener(this); 
              
 		stop.addActionListener(this); 
-		
-	
-             
-		
-		
+		   	
 		show();
 	   
 	}
@@ -74,9 +71,9 @@ class popup extends JFrame implements ActionListener
 	
 	{
 	
-		
+		flag = true;
 	//System.out.println("hi");
-		 while(e.getSource() != stop )
+		 while(flag != false )
 		 {
 			 if( e.getSource() == start )
 				
@@ -96,20 +93,20 @@ class popup extends JFrame implements ActionListener
 		 }
 		
 	
-		}     
+		    
 	
 
 	
 		if ( e.getSource() == stop )
 
 		{
-	
+			flag = false;
 			System.exit(0);
 
 		}
 
 	
-	}
+	} }
 
 	public static void main(String v[]) throws  InterruptedException
 
