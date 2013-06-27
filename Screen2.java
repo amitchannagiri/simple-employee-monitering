@@ -36,10 +36,10 @@ class simplethread implements Runnable {
 			 o = date.getYear();
 			 o = o+1900;
 			
-			File dir = new File("C:/"+ login2.a + "/" + m + "-" + n + "-" + o );
+			File dir = new File("/home/amit/sample_pics/"+ login2.a + "/" + m + "-" + n + "-" + o );
 		    //boolean isDirCreated = 
 		    		dir.mkdirs();
-			File file = new File("C:/"+ login2.a + "/" + m + "-" + n + "-" + o,dateformat.format(date)+ ".jpg");
+			File file = new File("/home/amit/sample_pics/"+ login2.a + "/" + m + "-" + n + "-" + o,dateformat.format(date)+ ".jpg");
 			ImageIO.write(screencapture,"jpg", file);
 			
 		
