@@ -13,7 +13,7 @@ import javax.swing.tree.*;
 
 
 
-class popup extends JFrame implements ActionListener
+class popup extends JFrame
 	
 
 {
@@ -58,7 +58,36 @@ class popup extends JFrame implements ActionListener
 		p.add(stop);
 				           
 	//	start.addActionListener(this); 
-             
+			
+		start.addActionListener(new ActionListener() {
+		  public void actionPerformed(ActionEvent e)
+
+		        {
+
+                flag = true;
+
+                 while(flag == true )
+                 {
+                         
+                         simplethread s1 = new simplethread();
+                           	
+			try {
+
+
+					Thread.sleep(Integer.parseInt(del.getText()));
+					
+			} catch (InterruptedException e1) {
+
+				// TODO Auto-generated catch block
+
+				e1.printStackTrace();
+
+			}
+				 } } }
+
+		);
+
+	             
 	//	stop.addActionListener(this); 
 		stop.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent le){
@@ -75,7 +104,7 @@ class popup extends JFrame implements ActionListener
 
 	
 
-	public void actionPerformed(ActionEvent e)
+/*	public void actionPerformed(ActionEvent e)
 	
 	{
 	
@@ -115,7 +144,7 @@ Thread.sleep(Integer.parseInt(del.getText()));
 
 	
 	} }
-
+*/
 
 /*	stop.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent le){
